@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 40px;
+    color: #ffffff;
+}
+
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #080d2d;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.top {
+    background: #20253b;
+    padding: 14px 18px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top h2 {
+    font-size: 18px;
+}
+
+.moon {
+    background: #30364d;
+    border: none;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: -55px;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    border: none;
+    background: #292e44;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filters .active {
+    background: #ff5b55;
+}
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.card {
+    background: #20253b;
+    border: 1px solid #3a4055;
+    border-radius: 14px;
+    padding: 19px;
+    min-height: 140px;
+    position: relative;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-top: -30px;
+    margin-left: 55px;
+}
+
+.card p {
+    color: #b9bdc9;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-top: 8px;
+    min-height: 45px;
+}
+
+/* Icons */
+
+.icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.green {
+    background: #c8e5c7;
+    color: #193b22;
+}
+
+.blue {
+    background: #bce7ef;
+    color: #183d46;
+}
+
+.pink {
+    background: #f5c8d0;
+    color: #632936;
+}
+
+.purple {
+    background: #d5b9f1;
+    color: #45245f;
+}
+
+.violet {
+    background: #b9a2eb;
+    color: #392164;
+}
+
+.lightblue {
+    background: #abc9f1;
+    color: #254b77;
+}
+
+.cyan {
+    background: #8ce3e5;
+    color: #18595d;
+}
+
+.turquoise {
+    background: #8de1d4;
+    color: #155c52;
+}
+
+.peach {
+    background: #f4d0b6;
+    color: #6c3e22;
+}
+
+.remove {
+    background: transparent;
+    color: white;
+    border: 1px solid #596078;
+    padding: 7px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.toggle {
+    position: absolute;
+    right: 16px;
+    bottom: 19px;
+    width: 25px;
+    height: 15px;
+    background: #dce0e5;
+    border-radius: 20px;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+}
+
+.toggle.on {
+    background: #ff625c;
+}
+
+.toggle.on::after {
+    left: 12px;
+}
+
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        margin-top: 0;
+        justify-content: flex-start;
+    }
